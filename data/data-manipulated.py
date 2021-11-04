@@ -8,7 +8,7 @@ def if_uc(df, i, ii):
 
 if __name__ == '__main__':
     raw_ABUNDANCE = pd.read_csv('raw_data/clean_data.txt', sep='\t')
-    raw_META = pd.read_csv('raw_data/clean_meta.txt', sep='\t')
+    raw_META = pd.read_csv('raw_data/clean_meta.txt', sep='\t', index_col=0)
     raw_TAXA = pd.read_csv('raw_data/clean_tax.txt', sep='\t').drop(['Unnamed: 0', 'quality'], axis=1)
     raw_TAXA = raw_TAXA[['domain', 'phylum', 'class', 'order', 'family', 'genus']]
     taxa_NAME = []
@@ -19,4 +19,8 @@ if __name__ == '__main__':
         
     raw_ABUNDANCE['Unnamed: 0'] = taxa_NAME
     raw_ABUNDANCE.rename(columns={'Unnamed: 0': 'Samples'}, inplace=True)
-    print(raw_ABUNDANCE.head())
+    raw_ABUNDANCE.to_csv('abundance.csv', index=0)
+    
+    raw_META.index.rename('SampleID', inplace=True)
+    age_META = raw_META['Age']
+    age_META.to_csv('metadata.csv')
