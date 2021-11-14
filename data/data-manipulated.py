@@ -22,7 +22,7 @@ if __name__ == '__main__':
     rawAbundance.to_csv('abundance.csv', index=0)
     
     rawMeta.index.rename('SampleID', inplace=True)
-    normalMeta = rawMeta[rawMeta['Group'] != 'young soldier']['Age']
-    soldierMeta = rawMeta[rawMeta['Group'] == 'young soldier']['Age']
-    normalMeta.to_csv('normal_meta.csv')
-    soldierMeta.to_csv('soldier_meta.csv')
+    normalMeta = rawMeta[rawMeta['Group'] != 'young soldier']
+    soldierMeta = rawMeta[rawMeta['Group'] == 'young soldier']
+    normalMeta.to_csv('normal-meta.csv')
+    soldierMeta.to_csv('soldier-meta.csv')
