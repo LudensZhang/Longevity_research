@@ -14,7 +14,7 @@ if __name__ == '__main__':
     taxaName = []
     
     for i in rawTaxa.index:
-        name = f'k__{if_uc(rawTaxa, i, 0)}:p__{if_uc(rawTaxa, i, 1)}:c__{if_uc(rawTaxa, i, 2)}:o__{if_uc(rawTaxa, i, 3)}:f__{if_uc(rawTaxa, i, 4)}:g__{if_uc(rawTaxa, i, 5)}:s__'
+        name = f'k__{if_uc(rawTaxa, i, 0)};p__{if_uc(rawTaxa, i, 1)};c__{if_uc(rawTaxa, i, 2)};o__{if_uc(rawTaxa, i, 3)};f__{if_uc(rawTaxa, i, 4)};g__{if_uc(rawTaxa, i, 5)};s__'
         taxaName.append(name)
         
     rawAbundance['Unnamed: 0'] = taxaName
