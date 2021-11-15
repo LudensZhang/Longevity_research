@@ -1,10 +1,10 @@
 import pandas as pd
 
 def if_uc(df, i, ii):
-    if rawTaxa.iloc[i, ii] == 'unclassified':
+    if df.iloc[i, ii] == 'unclassified':
         return None
     else:
-        return rawTaxa.iloc[i, ii]
+        return df.iloc[i, ii]
 
 if __name__ == '__main__':
     rawAbundance = pd.read_csv('raw_data/clean_data.txt', sep='\t')
