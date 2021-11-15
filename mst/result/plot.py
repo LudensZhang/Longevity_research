@@ -10,5 +10,6 @@ if __name__ == '__main__':
     resultMelt['Env'] = resultMelt['Env'].apply(lambda x: x[re.search('(root:)', x).end():] if re.search('(root:)', x) else x)
     p = (ggplot(resultMelt, aes(x='Env', y='Contribution'))+
          geom_boxplot()+
+         xlim(['kindergarten', 'Pupil', 'mid_school', 'youth', 'mid_age', 'elder', 'Unknown'])+
          theme_bw())
     p.save('./independent_result/plot.jpg')
