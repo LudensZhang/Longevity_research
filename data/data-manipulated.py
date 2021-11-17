@@ -26,3 +26,7 @@ if __name__ == '__main__':
     soldierMeta = rawMeta[rawMeta['Group'] == 'young soldier']
     normalMeta.to_csv('normal-meta.csv')
     soldierMeta.to_csv('soldier-meta.csv')
+    
+    for column in rawAbundance.columns[1:]:
+        rawAbundance[column] = rawAbundance[column].apply(lambda x: x/rawAbundance[column].sum())
+    rawAbundance.to_csv('relative_abundance.csv')
