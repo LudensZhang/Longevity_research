@@ -4,6 +4,7 @@ import re
 from plotnine import*
 from skbio.diversity import beta_diversity
 from skbio.stats.ordination import *
+from scipy.spatial.distance import pdist, squareform
 
 
 
@@ -21,7 +22,8 @@ if __name__ == '__main__':
      # PCOA plot
      metaNormal = pd.read_csv('../../../data/normal-meta.csv', index_col=0)['Group']
      abundanceNormal = pd.read_csv('../../../data/relative_abundance.csv', index_col=0)[metaNormal.index.tolist()].T
-     bcDm = beta_diversity('braycurtis', abundanceNormal, abundanceNormal.index)
+     # bcDm = beta_diversity('braycurtis', abundanceNormal, abundanceNormal.index)
+     bcDm = squareform(pdist(abundanceNormal, metric='jensenshannon'))
      bcPcoa = pd.DataFrame(pcoa(bcDm, number_of_dimensions=2).samples.values.tolist(), 
                               index=abundanceNormal.index, columns=['PC1', 'PC2'])
      
