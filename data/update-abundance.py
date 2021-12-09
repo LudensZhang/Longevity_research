@@ -9,6 +9,6 @@ if __name__ == '__main__':
     rltAbundance['SUM'] = rltAbundance.apply(lambda x: x.sum(), axis=1)
     rltAbundance = rltAbundance[rltAbundance['SUM'] > 0.2]
     rltAbundance.to_csv('rlt-updated.csv')
-    
+    print(rltAbundance.shape)
     
         
