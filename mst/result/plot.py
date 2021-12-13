@@ -37,21 +37,23 @@ if __name__ == '__main__':
      tfP.save('./transfer_result/plot.jpg')
 
      # PCOA plot
+     groupCategory = pd.CategoricalDtype(['Kindergarten', 'Pupils', 'Middle school', 'Youth', 
+                                        'Middle age', 'Elder', 'Centenarians'], ordered=True)
      metaNormal = pd.read_csv('../../data/normal-meta.csv', index_col=0)['Group']
+     metaNormal.replace({'kindergarten': 'Kindergarten', 'mid_school': 'Middle school', 
+                         'youth': 'Youth', 'mid_age': 'Middle age', 'elder': 'Elder'}, inplace=True)
      abundanceNormal = pd.read_csv('../../data/relative-abundance.csv', index_col=0)[metaNormal.index.tolist()].T
-     print(abundanceNormal.shape)
      jsDm = squareform(pdist(abundanceNormal, metric='jensenshannon'))
      jsPcoa = pd.DataFrame(pcoa(jsDm, number_of_dimensions=2).samples.values.tolist(), 
                               index=abundanceNormal.index, columns=['PC1', 'PC2'])
      pcoaPlot = (ggplot(jsPcoa, aes('PC1', 'PC2', color=metaNormal, fill=metaNormal))+
                     geom_point(size=2)+
-                    stat_ellipse()+
+                    stat_ellipse(geom = "polygon", alpha = 0.1)+
                     theme_bw()+
                     theme(axis_line = element_line(color="gray", size = 2))+
                     theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
                     theme(figure_size=(10, 10))+
                     theme(legend_position = (0.8,0.8))+
-                    scale_fill_manual(values=['#5F9933', '#57E6D8', '#E68057', '#3E4A99', '#EBCF68', '#923299', '#66CCFF'])+
                     theme(text=element_text(size=20)))
      pcoaPlot.save('pcoa_plot.jpg')
      
