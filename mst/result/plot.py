@@ -14,9 +14,12 @@ if __name__ == '__main__':
      indResult.rename(columns={'Unnamed: 0': 'SampleID'}, inplace=True)
      indMelt = indResult.melt(id_vars='SampleID', var_name='Env', value_name='Contribution')
      indMelt['Env'] = indMelt['Env'].apply(lambda x: x[re.search('(root:)', x).end():] if re.search('(root:)', x) else x)
+     indMelt['Env'].replace({'kindergarten': 'Kindergarten', 'mid_school': 'Middle school', 
+                              'youth': 'Youth', 'mid_age': 'Middle age', 'elder': 'Elder'}, inplace=True)
+     indMelt.to_csv('independent_result/layerMelt.csv', index=0)
      tfP = (ggplot(indMelt, aes(x='Env', y='Contribution'))+
           geom_boxplot()+
-          xlim(['kindergarten', 'Pupils', 'mid_school', 'youth', 'mid_age', 'elder'])+
+          xlim(['Kindergarten', 'Pupils', 'Middle school', 'Youth', 'Middle age', 'Elder'])+
           theme_bw())
      tfP.save('./independent_result/plot.jpg')
      
@@ -24,9 +27,12 @@ if __name__ == '__main__':
      tfResult.rename(columns={'Unnamed: 0': 'SampleID'}, inplace=True)
      tfMelt = tfResult.melt(id_vars='SampleID', var_name='Env', value_name='Contribution')
      tfMelt['Env'] = tfMelt['Env'].apply(lambda x: x[re.search('(root:)', x).end():] if re.search('(root:)', x) else x)
+     tfMelt['Env'].replace({'kindergarten': 'Kindergarten', 'mid_school': 'Middle school', 
+                              'youth': 'Youth', 'mid_age': 'Middle age', 'elder': 'Elder'}, inplace=True)
+     tfMelt.to_csv('transfer_result/layerMelt.csv', index=0)
      tfP = (ggplot(tfMelt, aes(x='Env', y='Contribution'))+
           geom_boxplot()+
-          xlim(['kindergarten', 'Pupils', 'mid_school', 'youth', 'mid_age', 'elder'])+
+          xlim(['Kindergarten', 'Pupils', 'Middle school', 'Youth', 'Middle age', 'Elder'])+
           theme_bw())
      tfP.save('./transfer_result/plot.jpg')
 
@@ -39,12 +45,13 @@ if __name__ == '__main__':
                               index=abundanceNormal.index, columns=['PC1', 'PC2'])
      pcoaPlot = (ggplot(jsPcoa, aes('PC1', 'PC2', color=metaNormal, fill=metaNormal))+
                     geom_point(size=2)+
-                    stat_ellipse(geom = "polygon", alpha = 0.25)+
+                    stat_ellipse()+
                     theme_bw()+
                     theme(axis_line = element_line(color="gray", size = 2))+
                     theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
                     theme(figure_size=(10, 10))+
                     theme(legend_position = (0.8,0.8))+
+                    scale_fill_manual(values=['#5F9933', '#57E6D8', '#E68057', '#3E4A99', '#EBCF68', '#923299', '#66CCFF'])+
                     theme(text=element_text(size=20)))
      pcoaPlot.save('pcoa_plot.jpg')
      
@@ -62,5 +69,6 @@ if __name__ == '__main__':
                     theme(legend_position = (0.8,0.8))+
                     theme(text=element_text(size=20)))
      pcaPlot.save('pca_plot.jpg')
+     
      
      
