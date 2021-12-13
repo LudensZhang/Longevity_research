@@ -5,6 +5,18 @@ library(reshape2)
 
 inde.Data <- read.csv('independent_result/layerMelt.csv')[, c(2,3)] 
 trans.Data <- read.csv('transfer_result/layerMelt.csv')[, c(2,3)]
+inde.Data['mode'] <- 'independent'
+trans.Data['mode'] <- 'transfer'
+bind.Data <- bind_rows(inde.Data, trans.Data)
+
+box.Plot <- ggplot(bind.Data, aes(x = Env, y = Contribution, fill=mode))+
+                geom_boxplot()+
+                xlim(c('Kindergarten', 'Pupils', 'Middle school', 'Youth', 'Middle age', 'Elder'))+
+                ylim(c(0, 1))+
+                xlab('')+
+                ylab('Contribution')+
+                theme_bw()+
+                geom_smooth()
 
 inde.Box.Plot = ggplot(inde.Data, aes(x=forcats::fct_relevel(Env, 'Kindergarten', 'Pupils', 'Middle school', 'Youth', 'Middle age', 'Elder'), y=Contribution))+
     geom_boxplot(fill=c('#5F9933', '#57E6D8', '#E68057', '#3E4A99', '#EBCF68', '#923299'), lwd=1)+
