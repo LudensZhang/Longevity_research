@@ -22,10 +22,10 @@ box.Plot <- ggplot(bind.Data)+
                 scale_fill_manual(values=c('#D67F67', '#66D6B4'))+
                 guides()+
                 theme_bw()+
-                labs(title='MST result of the Centenarian group')+
+                labs(title='MST result of the Elder group')+
                 theme(text=element_text(size=30),
                         plot.title=(element_text(hjust=0.5)),
                         legend.title=element_blank(),
-                        legend.position=(c(0.9, 0.93)),
-                        legend.key.size=unit(1, 'cm'))
+                        legend.position=(c(0.89, 0.9)),
+                        legend.key.size=unit(1.5, 'cm'))
 ggsave('box_plot.jpg', height=10, width=15)
