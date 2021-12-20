@@ -21,7 +21,9 @@ if __name__ == '__main__':
     
     centenarienBox = (ggplot(centenarienData, aes(x='variable', y='value', fill='mode'))+
     	    	    	geom_boxplot()+
+			ggtitle('MST result of centenarien')+
 			xlab('Env')+
-			ylab('Contibution'))
+			ylab('Contibution')+
+			theme(plot_title=element_text(hjust=0.5)))
     centenarienBox.save('centenarienBox.jpg')
     
