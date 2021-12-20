@@ -26,4 +26,11 @@ if __name__ == '__main__':
 			ylab('Contibution')+
 			theme(plot_title=element_text(hjust=0.5)))
     centenarienBox.save('centenarienBox.jpg')
-    
+   
+    elderBox = (ggplot(elderData, aes(x='variable', y='value', fill='mode'))+
+			geom_boxplot()+
+			ggtitle('MST result of elder')+
+			xlab('Env')+
+			ylab('Contribution')+
+			theme(plot_title=element_text(hjust=0.5)))
+    elderBox.save('elderBox.jpg') 
