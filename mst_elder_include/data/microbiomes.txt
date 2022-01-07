@@ -1,0 +1,6 @@
+root:Pupils
+root:youth
+root:mid_school
+root:kindergarten
+root:mid_age
+root:elder
