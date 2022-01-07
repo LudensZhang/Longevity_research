@@ -1,0 +1,660 @@
+SampleID,Env
+DYEY1,root:Young
+DYEY10,root:Young
+DYEY2,root:Young
+DYEY3,root:Young
+DYEY4,root:Young
+DYEY5,root:Young
+DYEY6,root:Young
+DYEY7,root:Young
+DYEY8,root:Young
+DYEY9,root:Young
+TET1,root:Young
+TET10,root:Young
+TET100,root:Young
+TET103,root:Young
+TET104,root:Young
+TET105,root:Young
+TET106,root:Young
+TET107,root:Young
+TET108,root:Young
+TET109,root:Young
+TET110,root:Young
+TET112,root:Young
+TET113,root:Young
+TET114,root:Young
+TET115,root:Young
+TET117,root:Young
+TET118,root:Young
+TET119,root:Young
+TET120,root:Young
+TET121,root:Young
+TET14,root:Young
+TET15,root:Young
+TET16,root:Young
+TET18,root:Young
+TET19,root:Young
+TET2,root:Young
+TET20,root:Young
+TET24,root:Young
+TET26,root:Young
+TET28,root:Young
+TET29,root:Young
+TET31,root:Young
+TET33,root:Young
+TET34,root:Young
+TET35,root:Young
+TET36,root:Young
+TET37,root:Young
+TET38,root:Young
+TET39,root:Young
+TET4,root:Young
+TET40,root:Young
+TET41,root:Young
+TET42,root:Young
+TET43,root:Young
+TET44,root:Young
+TET45,root:Young
+TET46,root:Young
+TET47,root:Young
+TET48,root:Young
+TET5,root:Young
+TET51,root:Young
+TET52,root:Young
+TET53,root:Young
+TET54,root:Young
+TET56,root:Young
+TET57,root:Young
+TET58,root:Young
+TET6,root:Young
+TET60,root:Young
+TET61,root:Young
+TET62,root:Young
+TET63,root:Young
+TET65,root:Young
+TET67,root:Young
+TET68,root:Young
+TET7,root:Young
+TET70,root:Young
+TET71,root:Young
+TET72,root:Young
+TET75,root:Young
+TET76,root:Young
+TET77,root:Young
+TET78,root:Young
+TET79,root:Young
+TET8,root:Young
+TET80,root:Young
+TET81,root:Young
+TET82,root:Young
+TET84,root:Young
+TET85,root:Young
+TET86,root:Young
+TET87,root:Young
+TET88,root:Young
+TET89,root:Young
+TET9,root:Young
+TET90,root:Young
+TET92,root:Young
+TET93,root:Young
+TET94,root:Young
+TET95,root:Young
+TET96,root:Young
+TET97,root:Young
+TET98,root:Young
+DXX1,root:Young
+DXX10,root:Young
+DXX11,root:Young
+DXX116,root:Young
+DXX12,root:Young
+DXX13,root:Young
+DXX136,root:Young
+DXX15,root:Young
+DXX16,root:Young
+DXX17,root:Young
+DXX18,root:Young
+DXX19,root:Young
+DXX2,root:Young
+DXX20,root:Young
+DXX21,root:Young
+DXX22,root:Young
+DXX23,root:Young
+DXX24,root:Young
+DXX25,root:Young
+DXX26,root:Young
+DXX5,root:Young
+DXX6,root:Young
+DXX7,root:Young
+DXX8,root:Young
+DXX9,root:Young
+TXX1,root:Young
+TXX10,root:Young
+TXX101,root:Young
+TXX102,root:Young
+TXX103,root:Young
+TXX104,root:Young
+TXX105,root:Young
+TXX106,root:Young
+TXX107,root:Young
+TXX108,root:Young
+TXX109,root:Young
+TXX11,root:Young
+TXX111,root:Young
+TXX112,root:Young
+TXX113,root:Young
+TXX114,root:Young
+TXX115,root:Young
+TXX118,root:Young
+TXX119,root:Young
+TXX12,root:Young
+TXX120,root:Young
+TXX121,root:Young
+TXX122,root:Young
+TXX123,root:Young
+TXX124,root:Young
+TXX125,root:Young
+TXX126,root:Young
+TXX127,root:Young
+TXX128,root:Young
+TXX129,root:Young
+TXX13,root:Young
+TXX130,root:Young
+TXX131,root:Young
+TXX132,root:Young
+TXX133,root:Young
+TXX134,root:Young
+TXX135,root:Young
+TXX137,root:Young
+TXX138,root:Young
+TXX139,root:Young
+TXX14,root:Young
+TXX140,root:Young
+TXX141,root:Young
+TXX142,root:Young
+TXX143,root:Young
+TXX144,root:Young
+TXX145,root:Young
+TXX146,root:Young
+TXX147,root:Young
+TXX148,root:Young
+TXX149,root:Young
+TXX15,root:Young
+TXX151,root:Young
+TXX152,root:Young
+TXX16,root:Young
+TXX17,root:Young
+TXX18,root:Young
+TXX19,root:Young
+TXX2,root:Young
+TXX20,root:Young
+TXX21,root:Young
+TXX22,root:Young
+TXX23,root:Young
+TXX24,root:Young
+TXX25,root:Young
+TXX26,root:Young
+TXX28,root:Young
+TXX29,root:Young
+TXX30,root:Young
+TXX32,root:Young
+TXX33,root:Young
+TXX34,root:Young
+TXX35,root:Young
+TXX36,root:Young
+TXX37,root:Young
+TXX38,root:Young
+TXX40,root:Young
+TXX42,root:Young
+TXX43,root:Young
+TXX44,root:Young
+TXX45,root:Young
+TXX46,root:Young
+TXX47,root:Young
+TXX48,root:Young
+TXX49,root:Young
+TXX5,root:Young
+TXX50,root:Young
+TXX51,root:Young
+TXX52,root:Young
+TXX53,root:Young
+TXX54,root:Young
+TXX55,root:Young
+TXX56,root:Young
+TXX57,root:Young
+TXX58,root:Young
+TXX59,root:Young
+TXX60,root:Young
+TXX61,root:Young
+TXX62,root:Young
+TXX63,root:Young
+TXX64,root:Young
+TXX65,root:Young
+TXX66,root:Young
+TXX67,root:Young
+TXX68,root:Young
+TXX69,root:Young
+TXX70,root:Young
+TXX72,root:Young
+TXX73,root:Young
+TXX74,root:Young
+TXX75,root:Young
+TXX76,root:Young
+TXX77,root:Young
+TXX78,root:Young
+TXX79,root:Young
+TXX8,root:Young
+TXX80,root:Young
+TXX81,root:Young
+TXX82,root:Young
+TXX83,root:Young
+TXX84,root:Young
+TXX85,root:Young
+TXX86,root:Young
+TXX87,root:Young
+TXX88,root:Young
+TXX89,root:Young
+TXX9,root:Young
+TXX90,root:Young
+TXX91,root:Young
+TXX93,root:Young
+TXX94,root:Young
+TXX95,root:Young
+TXX96,root:Young
+TXX97,root:Young
+TXX98,root:Young
+TXX99,root:Young
+TZX1,root:Young
+TZX10,root:Young
+TZX100,root:Young
+TZX101,root:Young
+TZX102,root:Young
+TZX103,root:Young
+TZX104,root:Young
+TZX106,root:Young
+TZX107,root:Young
+TZX108,root:Young
+TZX109,root:Young
+TZX11,root:Young
+TZX111,root:Young
+TZX112,root:Young
+TZX114,root:Young
+TZX115,root:Young
+TZX116,root:Young
+TZX117,root:Young
+TZX118,root:Young
+TZX12,root:Young
+TZX120,root:Young
+TZX121,root:Young
+TZX13,root:Young
+TZX14,root:Young
+TZX15,root:Young
+TZX16,root:Young
+TZX17,root:Young
+TZX18,root:Young
+TZX19,root:Young
+TZX2,root:Young
+TZX20,root:Young
+TZX21,root:Young
+TZX23,root:Young
+TZX23.2,root:Young
+TZX24,root:Young
+TZX25,root:Young
+TZX26,root:Young
+TZX27,root:Young
+TZX28,root:Young
+TZX29,root:Young
+TZX3,root:Young
+TZX30,root:Young
+TZX31,root:Young
+TZX32,root:Young
+TZX33,root:Young
+TZX34,root:Young
+TZX35,root:Young
+TZX36,root:Young
+TZX37,root:Young
+TZX38,root:Young
+TZX39,root:Young
+TZX4,root:Young
+TZX40,root:Young
+TZX41,root:Young
+TZX42,root:Young
+TZX43,root:Young
+TZX44,root:Young
+TZX45,root:Young
+TZX46,root:Young
+TZX47,root:Young
+TZX48,root:Young
+TZX49,root:Young
+TZX5,root:Young
+TZX50,root:Young
+TZX51,root:Young
+TZX52,root:Young
+TZX53,root:Young
+TZX54,root:Young
+TZX55,root:Young
+TZX56,root:Young
+TZX57,root:Young
+TZX58,root:Young
+TZX59,root:Young
+TZX6,root:Young
+TZX60,root:Young
+TZX61,root:Young
+TZX62,root:Young
+TZX63,root:Young
+TZX64,root:Young
+TZX65,root:Young
+TZX66,root:Young
+TZX67,root:Young
+TZX68,root:Young
+TZX69,root:Young
+TZX7,root:Young
+TZX70,root:Young
+TZX71,root:Young
+TZX72,root:Young
+TZX73,root:Young
+TZX74,root:Young
+TZX75,root:Young
+TZX76,root:Young
+TZX77,root:Young
+TZX78,root:Young
+TZX79,root:Young
+TZX8,root:Young
+TZX80,root:Young
+TZX81,root:Young
+TZX82,root:Young
+TZX83,root:Young
+TZX84,root:Young
+TZX85,root:Young
+TZX86,root:Young
+TZX87,root:Young
+TZX88,root:Young
+TZX9,root:Young
+TZX90,root:Young
+TZX92,root:Young
+TZX94,root:Young
+TZX95,root:Young
+TZX96,root:Young
+TZX97,root:Young
+TZX98,root:Young
+TZX99,root:Young
+Q108,root:Young
+Q120,root:Young
+Q123,root:Young
+Q126,root:Young
+Q32,root:Young
+Q41,root:Young
+Q47,root:Young
+TQ034,root:Young
+TQ052,root:Young
+TQ060,root:Young
+TQ062,root:Young
+TQ064,root:Young
+TQ083,root:Young
+TQ084,root:Young
+TQ090,root:Young
+TQ1,root:Young
+TQ10,root:Young
+TQ100,root:Young
+TQ101,root:Young
+TQ102,root:Young
+TQ103,root:Young
+TQ104,root:Young
+TQ105,root:Young
+TQ106,root:Young
+TQ107,root:Young
+TQ108,root:Young
+TQ109,root:Young
+TQ11,root:Young
+TQ110,root:Young
+TQ111,root:Young
+TQ112,root:Young
+TQ113,root:Young
+TQ114,root:Young
+TQ115,root:Young
+TQ116,root:Young
+TQ117,root:Young
+TQ118,root:Young
+TQ119,root:Young
+TQ12,root:Young
+TQ121,root:Young
+TQ122,root:Young
+TQ124,root:Young
+TQ125,root:Young
+TQ127,root:Young
+TQ128,root:Young
+TQ129,root:Young
+TQ13,root:Young
+TQ130,root:Young
+TQ131,root:Young
+TQ132,root:Young
+TQ133,root:Young
+TQ135,root:Young
+TQ136,root:Young
+TQ137,root:Young
+TQ139,root:Young
+TQ14,root:Young
+TQ140,root:Young
+TQ141,root:Young
+TQ15,root:Young
+TQ16,root:Young
+TQ19,root:Young
+TQ2,root:Young
+TQ20,root:Young
+TQ21,root:Young
+TQ22,root:Young
+TQ23,root:Young
+TQ24,root:Young
+TQ25,root:Young
+TQ26,root:Young
+TQ27,root:Young
+TQ28,root:Young
+TQ29,root:Young
+TQ3,root:Young
+TQ30,root:Young
+TQ31,root:Young
+TQ33,root:Young
+TQ35,root:Young
+TQ36,root:Young
+TQ38,root:Young
+TQ39,root:Young
+TQ4,root:Young
+TQ42,root:Young
+TQ43,root:Young
+TQ44,root:Young
+TQ45,root:Young
+TQ46,root:Young
+TQ48,root:Young
+TQ49,root:Young
+TQ5,root:Young
+TQ50,root:Young
+TQ51,root:Young
+TQ53,root:Young
+TQ54,root:Young
+TQ55,root:Young
+TQ56,root:Young
+TQ57,root:Young
+TQ58,root:Young
+TQ59,root:Young
+TQ6,root:Young
+TQ61,root:Young
+TQ63,root:Young
+TQ65,root:Young
+TQ66,root:Young
+TQ67,root:Young
+TQ68,root:Young
+TQ69,root:Young
+TQ7,root:Young
+TQ70,root:Young
+TQ71,root:Young
+TQ72,root:Young
+TQ73,root:Young
+TQ74,root:Young
+TQ75,root:Young
+TQ76,root:Young
+TQ77,root:Young
+TQ78,root:Young
+TQ79,root:Young
+TQ8,root:Young
+TQ80,root:Young
+TQ81,root:Young
+TQ82,root:Young
+TQ85,root:Young
+TQ86,root:Young
+TQ87,root:Young
+TQ89,root:Young
+TQ9,root:Young
+TQ90,root:Young
+TQ92,root:Young
+TQ93,root:Young
+TQ94,root:Young
+TQ95,root:Young
+TQ96,root:Young
+TQ97,root:Young
+TQ98,root:Young
+TQ99,root:Young
+TZ20,root:Middle age
+TZ7,root:Middle age
+TZ95,root:Middle age
+TZ55,root:Middle age
+TZ86,root:Middle age
+TZ114,root:Middle age
+TZ66,root:Middle age
+TZ15,root:Middle age
+TZ109,root:Middle age
+TZ85,root:Middle age
+TZ115,root:Middle age
+TZ71,root:Middle age
+TZ62,root:Middle age
+TZ64,root:Middle age
+TZ112,root:Middle age
+TZ63,root:Middle age
+TZ93,root:Middle age
+TZ74,root:Middle age
+TZ65,root:Middle age
+TZ45,root:Middle age
+TZ11,root:Middle age
+TZ53,root:Middle age
+TZ44,root:Middle age
+TZ34,root:Middle age
+TZ59,root:Middle age
+TZ73,root:Middle age
+TZ94,root:Middle age
+TZ16,root:Middle age
+TZ102,root:Middle age
+TZ38,root:Middle age
+TZ24,root:Middle age
+TZ58,root:Middle age
+TZ28,root:Middle age
+TZ83,root:Middle age
+TZ33,root:Middle age
+TZ29,root:Middle age
+TZ22,root:Middle age
+TZ107,root:Middle age
+TZ12,root:Middle age
+TZ32,root:Middle age
+TZ78,root:Middle age
+TZ6,root:Middle age
+TZ111,root:Middle age
+TZ47,root:Middle age
+TZ88,root:Middle age
+TZ30.1,root:Middle age
+TZ108,root:Middle age
+TZ19,root:Middle age
+TZ40,root:Middle age
+TZ91,root:Middle age
+TZ52,root:Middle age
+TZ37,root:Middle age
+TZ101,root:Middle age
+TZ57,root:Middle age
+TZ81,root:Middle age
+TZ13,root:Middle age
+TZ89,root:Middle age
+TZ4,root:Middle age
+TZ87,root:Middle age
+TZ3,root:Middle age
+TZ5,root:Middle age
+TZ8,root:Middle age
+TZ26,root:Middle age
+TZ75,root:Middle age
+TZ80,root:Middle age
+TZ60,root:Middle age
+TZ30,root:Middle age
+TZ56,root:Middle age
+TZ41,root:Middle age
+TZ76,root:Middle age
+TZ9,root:Middle age
+TZ50,root:Middle age
+TZ77,root:Middle age
+TZ68,root:Middle age
+TZ82,root:Middle age
+TZ104,root:Middle age
+TZ110,root:Middle age
+TZ96,root:Middle age
+TZ67,root:Middle age
+TZ92,root:Middle age
+TZ113,root:Middle age
+TZ105,root:Middle age
+TZ69,root:Middle age
+TZ48,root:Middle age
+TZ103,root:Middle age
+TZ61,root:Middle age
+TL100,root:Elder
+TL76,root:Elder
+TL65,root:Elder
+TL96,root:Elder
+TL103,root:Elder
+TL95,root:Elder
+TL111,root:Elder
+TL61,root:Elder
+TL94,root:Elder
+TL116,root:Elder
+TL31,root:Elder
+TL118,root:Elder
+TL13,root:Elder
+TL121,root:Elder
+TL87,root:Elder
+TL64,root:Elder
+TL108,root:Elder
+TL73,root:Elder
+TL55,root:Elder
+TL109,root:Elder
+TL38,root:Elder
+TL67,root:Elder
+TL10,root:Elder
+TL3,root:Elder
+TL97,root:Elder
+TL6,root:Elder
+100a,root:Elder
+TL120,root:Elder
+TL54,root:Elder
+TL117,root:Elder
+TL71,root:Elder
+TL1,root:Elder
+TL124,root:Elder
+TL78,root:Elder
+TL105,root:Elder
+TL81,root:Elder
+TL91,root:Elder
+TL66,root:Elder
+TL92,root:Elder
+TL88,root:Elder
+TL60,root:Elder
+TL69,root:Elder
+TL113,root:Elder
+TL59,root:Elder
+TL115,root:Elder
+TL85,root:Elder
+TL4,root:Elder
+TL39,root:Elder
+TL16,root:Elder
+TL114,root:Elder
+TL129,root:Elder
+TL102,root:Elder
+TL84,root:Elder
+TL112,root:Elder
+TL74,root:Elder
+TL82,root:Elder
+TL83,root:Elder
+100b,root:Elder
+TL90,root:Elder
+TL5,root:Elder
