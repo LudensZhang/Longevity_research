@@ -26,6 +26,7 @@ if __name__ == '__main__':
     centenariansQueryAbundance = rawAbundance[centenariansQueryMeta.index.tolist()]
     sourceAbundance = rawAbundance[sourceMeta.index.tolist()]
     
+    rawMeta.to_csv('metadata.csv')
     sourceMeta.to_csv('elder/metadata.csv')
     sourceMeta.to_csv('centenarien/metadata.csv')
     sourceAbundance.to_csv('elder/source_abundance.tsv', sep='\t')

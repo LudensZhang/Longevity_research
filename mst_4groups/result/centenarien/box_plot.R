@@ -22,7 +22,7 @@ box.Plot <- ggplot(bind.Data)+
                 scale_fill_manual(values=c('#D67F67', '#66D6B4'))+
                 guides()+
                 theme_bw()+
-                labs(title='MST result of the Elder group')+
+                labs(title='MST result of the Centenarians group')+
                 theme(text=element_text(size=30),
                         plot.title=(element_text(hjust=0.5)),
                         legend.title=element_blank(),
