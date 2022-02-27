@@ -6,17 +6,16 @@ from scipy.spatial.distance import pdist, squareform
 from plotnine import *
 
 if __name__ == '__main__':
-    rawMeta = pd.read_csv('../../data_jiangsu_and_sichuan/metadata_jiangsu.csv', index_col=0)
-    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_jiangsu.csv', index_col=0)[rawMeta.index.tolist()].T
+    rawMeta = pd.read_csv('../../data_jiangsu_and_sichuan/metadata_whole.csv', index_col=0)
+    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_whole.csv', index_col=0)[rawMeta.index.tolist()].T
     jsDm = squareform(pdist(rawAbundance, metric='jensenshannon'))
     jsPcoa = pd.DataFrame(pcoa(jsDm, number_of_dimensions=2).samples.values.tolist(), 
                             index=rawAbundance.index, columns=['PC1', 'PC2'])
-    
     jsPcoa['Env'] = rawMeta
     
     pcoaPlot = (ggplot(jsPcoa, aes('PC1', 'PC2', color='Env', fill='Env'))+
                     geom_point(size=2)+
-                    stat_ellipse(geom = "polygon", alpha = 0.1)+
+                    stat_ellipse()+
                     theme_bw()+
                     theme(axis_line = element_line(color="gray", size = 2))+
                     theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
@@ -27,6 +26,15 @@ if __name__ == '__main__':
     
     pc1BoxPlot = (ggplot(jsPcoa, aes(x='Env', y='PC1', fill='Env'))+
                     geom_boxplot()+
+                    theme_bw()+
+                    theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
+                    theme(axis_line = element_line(color="gray", size = 1), axis_text_y = element_blank())+
+                    coord_flip())
+    pc1BoxPlot.save('PC1_box.jpg', width=4.8, height=1)
+    
+    pc2BoxPlot = (ggplot(jsPcoa, aes(x='Env', y='PC2', fill='Env'))+
+                    geom_boxplot()+
                     theme_bw()+ 
-                    theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank()))
-    pc1BoxPlot.save('PC1_box.jpg', width=1, height=4.8)
+                    theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
+                    theme(axis_line = element_line(color="gray", size = 1), axis_text_x = element_blank()))
+    pc2BoxPlot.save('PC2_box.jpg', width=1, height=4.8)

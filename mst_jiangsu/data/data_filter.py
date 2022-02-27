@@ -1,10 +1,16 @@
 import pandas as pd   
 
 if __name__ == '__main__':
-    rawMeta = pd.read_csv('../../data_jiangsu_and_sichuan/metadata_jiangsu.csv', index_col=0)
-    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_jiangsu.csv', index_col=0)
+    rawMeta = pd.read_csv('../../data_jiangsu_and_sichuan/metadata_china.csv', index_col=0)
+    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_china.csv', index_col=0)
 
-    sourceMeta = rawMeta[rawMeta['Env'] != 'Centenarian'].groupby('Env').sample(n=50)
+    # elderQueryMeta = rawMeta[rawMeta['Env'] == 'Elder'].sample(frac=0.3)
+    # centenarianQueryMeta = rawMeta[rawMeta['Env'] == 'Centenarian']
+    # sourceMeta = rawMeta.drop(elderQueryMeta.index.tolist() + centenarianQueryMeta.index.tolist())
+    # sourceMeta['Env'] = sourceMeta['Env'].apply(lambda x: f'root:{x}')
+    # sourceMeta.index.rename('SampleID', inplace=True)
+    
+    sourceMeta = rawMeta[rawMeta['Env'] != 'Centenarian'].groupby('Env').sample(n=200)
     rawElderMeta = rawMeta[rawMeta['Env'] == 'Elder']
     elderQueryMeta = rawElderMeta.drop(sourceMeta[sourceMeta['Env'] == 'Elder'].index)
     centenarianQueryMeta = rawMeta[rawMeta['Env'] == 'Centenarian']
