@@ -7,7 +7,9 @@ from plotnine import *
 
 if __name__ == '__main__':
     rawMeta = pd.read_csv('../../data_jiangsu_and_sichuan/metadata_whole.csv', index_col=0)
-    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_whole.csv', index_col=0)[rawMeta.index.tolist()].T
+    rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_whole.csv', index_col=0).T
+    rawMeta.sort_index(inplace=True)
+    rawAbundance = rawAbundance.loc[rawMeta.index.tolist()]
     jsDm = squareform(pdist(rawAbundance, metric='jensenshannon'))
     jsPcoa = pd.DataFrame(pcoa(jsDm, number_of_dimensions=2).samples.values.tolist(), 
                             index=rawAbundance.index, columns=['PC1', 'PC2'])
@@ -17,6 +19,8 @@ if __name__ == '__main__':
                     geom_point(size=2)+
                     stat_ellipse()+
                     theme_bw()+
+                    xlim(-0.5, 0.5)+
+                    ylim(-0.5, 0.5)+
                     theme(axis_line = element_line(color="gray", size = 2))+
                     theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
                     theme(figure_size=(10, 10))+
