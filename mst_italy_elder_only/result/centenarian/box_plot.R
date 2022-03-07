@@ -9,7 +9,7 @@ inde.Data['mode'] <- 'independent'
 trans.Data['mode'] <- 'transfer'
 bind.Data <- bind_rows(inde.Data, trans.Data)
 # bind.Data$Env <- factor(bind.Data$Env, levels=c('Young','Middle age', 'Elder'))
-bind.Data$Env <- factor(bind.Data$Env, levels=c('Young', 'Unknown'))
+bind.Data$Env <- factor(bind.Data$Env, levels=c('Young', 'Elder'))
 
 box.Plot <- ggplot(bind.Data)+
                 geom_boxplot(aes(x=Env, y=Contribution, fill=mode), show.legend=FALSE)+
