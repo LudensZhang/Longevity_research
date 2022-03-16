@@ -10,11 +10,27 @@ if __name__ == '__main__':
     # sourceMeta['Env'] = sourceMeta['Env'].apply(lambda x: f'root:{x}')
     # sourceMeta.index.rename('SampleID', inplace=True)
     
-    sourceMeta = rawMeta[rawMeta['Env'] == 'Young'].sample(n=30)
+    sourceMeta = rawMeta[rawMeta['Env'] == 'Young'].sample(n=60)
     sourceMeta = sourceMeta.append(rawMeta[rawMeta['Env'] == 'Elder'])
-    rawElderMeta = rawMeta[rawMeta['Env'] == 'Elder']
-    elderQueryMeta = rawElderMeta.sample(frac=0.5)
-    print(sourceMeta.head())
+    elderMetaRaw = rawMeta[rawMeta['Env'] == 'Elder']
+    elderAbundanceRaw = rawAbundance[elderMetaRaw.index]
+    
+    # We copied the elder metadata for small quantities
+    elderMetaCp0 = elderMetaRaw.copy()
+    elderMetaCp0.index = [f'{id}_cp0' for id in elderMetaRaw.index.tolist()]
+    elderAbundanceCp0 = elderAbundanceRaw.copy()
+    elderAbundanceCp0.columns = [f'{id}_cp0' for id in elderAbundanceRaw.columns.tolist()]
+    
+    elderMetaCp1 = elderMetaRaw.copy()
+    elderMetaCp1.index = [f'{id}_cp1' for id in elderMetaRaw.index.tolist()]
+    elderAbundanceCp1 = elderAbundanceRaw.copy()
+    elderAbundanceCp1.columns = [f'{id}_cp1' for id in elderAbundanceRaw.columns.tolist()]
+    
+    elderMetaCopy = pd.concat([elderMetaRaw, elderMetaCp0, elderMetaCp1])
+    sourceMeta = pd.concat([sourceMeta, elderMetaCp0, elderMetaCp1])
+    rawAbundance = pd.concat([rawAbundance, elderAbundanceCp0, elderAbundanceCp1], axis=1)
+    
+    elderQueryMeta = elderMetaCopy.sample(frac=0.3)
     sourceMeta.drop(elderQueryMeta.index, inplace=True)
     centenarianQueryMeta = rawMeta[rawMeta['Env'] == 'Centenarian']
     sourceMeta['Env'] = sourceMeta['Env'].apply(lambda x: f'root:{x}')

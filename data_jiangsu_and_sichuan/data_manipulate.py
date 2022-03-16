@@ -3,13 +3,13 @@ import numpy as np
 
 
 def AgeGroup(age):
-    # if age <= 30:
-    #     return 'Young'
-    if age <= 60:
+    if age <= 306:
         return 'Young'
+    # if age <= 60:
+    #     return 'Young'
     if age <= 100:
         return 'Elder'
-    else:
+    if age > 100:
         return 'Centenarian'
 
 
