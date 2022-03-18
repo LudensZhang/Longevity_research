@@ -3,11 +3,11 @@ import numpy as np
 
 
 def AgeGroup(age):
-    if age <= 306:
+    if age <= 30:
         return 'Young'
     # if age <= 60:
     #     return 'Young'
-    if age <= 100:
+    if age <= 100 and age > 60:
         return 'Elder'
     if age > 100:
         return 'Centenarian'
@@ -28,15 +28,15 @@ if __name__ == '__main__':
     # metaJiangsu.to_csv('metadata_jiangsu.csv')
     
     # whole data
-    # metaWhole = metaRaw['Age'].apply(AgeGroup)
-    # print(metaWhole.head())
-    # metaWhole.index.rename('SampleID', inplace=True)
-    # metaWhole.rename('Env', inplace=True)
-    # abundanceWhole = abundanceRaw[set(metaWhole.index) & set(abundanceRaw.columns)]
-    # abundanceWhole.to_csv('abundance_whole.csv')
-    # metaWhole = metaWhole.loc[abundanceWhole.columns]
-    # metaWhole.to_csv('metadata_whole.csv')
-    # print(metaWhole.value_counts())
+    metaWhole = metaRaw['Age'].apply(AgeGroup)
+    print(metaWhole.head())
+    metaWhole.index.rename('SampleID', inplace=True)
+    metaWhole.rename('Env', inplace=True)
+    abundanceWhole = abundanceRaw[set(metaWhole.index) & set(abundanceRaw.columns)]
+    abundanceWhole.to_csv('abundance_whole.csv')
+    metaWhole = metaWhole.loc[abundanceWhole.columns]
+    metaWhole.to_csv('metadata_whole.csv')
+    print(metaWhole.value_counts())
     
     # whole data with region of centenarian
     # metaRegion = metaRaw.copy()
@@ -76,17 +76,17 @@ if __name__ == '__main__':
     # print(metaChina.value_counts())
     
     # Only using italy elder
-    metaRaw['Env'] = metaRaw['Age'].apply(AgeGroup)
-    metaElderItaly = metaRaw[(metaRaw['Region'] == 'Italy') & (metaRaw['Env'] == 'Elder')]['Env']
-    metaOther = metaRaw[metaRaw['Env'] != 'Elder']['Env']
-    metaWhole = metaElderItaly.append(metaOther)
-    metaWhole.index.rename('SampleID', inplace=True)
-    metaWhole.rename('Env', inplace=True)
+    # metaRaw['Env'] = metaRaw['Age'].apply(AgeGroup)
+    # metaElderItaly = metaRaw[(metaRaw['Region'] == 'Italy') & (metaRaw['Env'] == 'Elder')]['Env']
+    # metaOther = metaRaw[metaRaw['Env'] != 'Elder']['Env']
+    # metaWhole = metaElderItaly.append(metaOther)
+    # metaWhole.index.rename('SampleID', inplace=True)
+    # metaWhole.rename('Env', inplace=True)
     
-    abundanceWhole = abundanceRaw[set(metaWhole.index) & set(abundanceRaw.columns)]
-    abundanceWhole.index.rename('Samples', inplace=True)
-    abundanceWhole.to_csv('abundance_italy_elder_only.csv')
-    metaWhole = metaWhole.loc[abundanceWhole.columns]
-    metaWhole.to_csv('metadata_italy_elder_only.csv')
-    print(metaWhole.value_counts())
+    # abundanceWhole = abundanceRaw[set(metaWhole.index) & set(abundanceRaw.columns)]
+    # abundanceWhole.index.rename('Samples', inplace=True)
+    # abundanceWhole.to_csv('abundance_italy_elder_only.csv')
+    # metaWhole = metaWhole.loc[abundanceWhole.columns]
+    # metaWhole.to_csv('metadata_italy_elder_only.csv')
+    # print(metaWhole.value_counts())
     
