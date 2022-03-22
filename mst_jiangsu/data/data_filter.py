@@ -10,7 +10,7 @@ if __name__ == '__main__':
     # sourceMeta['Env'] = sourceMeta['Env'].apply(lambda x: f'root:{x}')
     # sourceMeta.index.rename('SampleID', inplace=True)
     
-    sourceMeta = rawMeta[rawMeta['Env'] != 'Centenarian'].groupby('Env').sample(n=300)
+    sourceMeta = rawMeta[rawMeta['Env'] != 'Centenarian'].groupby('Env').sample(n=265)
     rawElderMeta = rawMeta[rawMeta['Env'] == 'Elder']
     elderQueryMeta = rawElderMeta.drop(sourceMeta[sourceMeta['Env'] == 'Elder'].index)
     centenarianQueryMeta = rawMeta[rawMeta['Env'] == 'Centenarian']

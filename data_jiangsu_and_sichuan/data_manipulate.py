@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # metaJiangsu.to_csv('metadata_jiangsu.csv')
     
     # whole data
-    metaWhole = metaRaw['Age'].apply(AgeGroup)
+    metaWhole = metaRaw['Age'].apply(AgeGroup).dropna()
     print(metaWhole.head())
     metaWhole.index.rename('SampleID', inplace=True)
     metaWhole.rename('Env', inplace=True)

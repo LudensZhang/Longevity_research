@@ -19,6 +19,8 @@ if __name__ == '__main__':
                     geom_point(size=2)+
                     stat_ellipse()+
                     theme_bw()+
+                    scale_fill_manual(['#B24D5E', '#4D5EB2', '#5EB24D'])+
+                    scale_color_manual(['#B24D5E', '#4D5EB2', '#5EB24D'])+
                     xlim(-0.5, 0.5)+
                     ylim(-0.5, 0.5)+
                     theme(axis_line = element_line(color="gray", size = 2))+
@@ -26,7 +28,7 @@ if __name__ == '__main__':
                     theme(figure_size=(10, 10))+
                     theme(legend_position = (0.8,0.8))+
                     theme(text=element_text(size=20)))
-    pcoaPlot.save('pcoa_plot.jpg')
+    pcoaPlot.save('pcoa_plot.jpg', dpi=300)
     
     pc1BoxPlot = (ggplot(jsPcoa, aes(x='Env', y='PC1', fill='Env'))+
                     geom_boxplot()+
