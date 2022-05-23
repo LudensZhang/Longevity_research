@@ -4,7 +4,7 @@ from skbio.diversity import alpha_diversity
 import seaborn as sns
 import matplotlib.pyplot as plt
 from plotnine import*
-from statannotations.Annotator import Annotator
+# from statannotations.Annotator import Annotator
 plt.style.use('ggplot')
 
 
@@ -36,6 +36,7 @@ if __name__ =='__main__':
     bcPlotFrame = pd.DataFrame(columns=['Bray-Curtis Uniqueness', 'Age'])
     for age, abundance in zip(ageGroup, dataList):
         bcPlotFrame = bcPlotFrame.append(CalculateBcUnique(age, abundance))
+    bcPlotFrame = bcPlotFrame[bcPlotFrame['Age'] != 'Centenarian']
     
     # calculate shannon
     shPlotFrame = pd.DataFrame(columns=["Shannon's Diversity", 'Age'])
@@ -46,8 +47,8 @@ if __name__ =='__main__':
     bcBoxPlot = (ggplot(bcPlotFrame, aes(x='Age', y='Bray-Curtis uniqueness', fill='Age'))+
                 geom_boxplot()+
                 xlab('')+
-                xlim(['Young', 'Senior', 'Centenarian'])+
-                scale_fill_manual(['#B24D5E', '#4D5EB2', '#5EB24D'])+
+                xlim(['Young', 'Senior'])+
+                scale_fill_manual(['#B24D5E', '#4D5EB2'])+
                 theme_bw()+
                 theme(legend_position = (0.8, 0.78),
                       legend_title = element_blank(),
@@ -64,14 +65,14 @@ if __name__ =='__main__':
     #                   legend_title = element_blank(),
     #                   legend_key_size = 10))
 
-    shBoxPlot = sns.boxplot(data=shPlotFrame, x='Age', y="Shannon's Diversity")
+    # shBoxPlot = sns.boxplot(data=shPlotFrame, x='Age', y="Shannon's Diversity")
     
-    pairs = [('Young', 'Senior'),
-             ('Young', 'Centenarian'),
-             ('Centenarian', 'Senior')]
+    # pairs = [('Young', 'Senior'),
+    #          ('Young', 'Centenarian'),
+    #          ('Centenarian', 'Senior')]
     
-    shBoxPlot = Annotator(shBoxPlot, data=shPlotFrame, x='Age', y="Shannon's Diversity", pairs=pairs)
-    shBoxPlot.configure(test='Mann-Whitney')
-    shBoxPlot.apply_test()
-    shBoxPlot.annotate()
-    plt.savefig('Shannon_Diversity.png', dpi=300)
+    # shBoxPlot = Annotator(shBoxPlot, data=shPlotFrame, x='Age', y="Shannon's Diversity", pairs=pairs)
+    # shBoxPlot.configure(test='Mann-Whitney')
+    # shBoxPlot.apply_test()
+    # shBoxPlot.annotate()
+    # plt.savefig('Shannon_Diversity.png', dpi=300)

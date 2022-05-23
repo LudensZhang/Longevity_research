@@ -10,6 +10,7 @@ if __name__ == '__main__':
     rawAbundance = pd.read_csv('../../data_jiangsu_and_sichuan/abundance_whole.csv', index_col=0).T
     rawMeta.sort_index(inplace=True)
     rawMeta.replace('Elder', 'Senior', inplace=True)
+    rawMeta = rawMeta[rawMeta['Env'] != 'Centenarian']
     rawAbundance = rawAbundance.loc[rawMeta.index.tolist()]
     jsDm = squareform(pdist(rawAbundance, metric='jensenshannon'))
     jsPcoa = pd.DataFrame(pcoa(jsDm, number_of_dimensions=2).samples.values.tolist(), 
@@ -20,15 +21,15 @@ if __name__ == '__main__':
                     geom_point(size=2)+
                     stat_ellipse()+
                     theme_bw()+
-                    scale_fill_manual(['#B24D5E', '#4D5EB2', '#5EB24D'])+
-                    scale_color_manual(['#B24D5E', '#4D5EB2', '#5EB24D'])+
+                    scale_fill_manual(['#4D5EB2', '#B24D5E'])+
+                    scale_color_manual(['#4D5EB2', '#B24D5E'])+
                     xlim(-0.5, 0.5)+
                     ylim(-0.5, 0.5)+
                     theme(axis_line = element_line(color="gray", size = 2))+
                     theme(panel_grid_major = element_blank(), panel_grid_minor = element_blank(), panel_background = element_blank())+
                     theme(figure_size=(10, 10))+
                     theme(legend_position = (0.8,0.8))+
-                    theme(text=element_text(size=20)))
+                    theme(text=element_text(size=20),legend_title = element_blank()))
     pcoaPlot.save('pcoa_plot.jpg', dpi=300)
     
     pc1BoxPlot = (ggplot(jsPcoa, aes(x='Env', y='PC1', fill='Env'))+

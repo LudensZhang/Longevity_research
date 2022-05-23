@@ -15,33 +15,43 @@ inde.Data$Env <- factor(inde.Data$Env, levels=c('Young', 'Senior'))
 inde.Data$Env <- factor(inde.Data$Env, levels=c('Young', 'Senior'))
 
 inde.box.Plot <- ggplot(inde.Data)+
-                geom_boxplot(aes(x=Env, y=Contribution, fill=Region), lwd=1)+
+                geom_boxplot(aes(x=Env, y=Contribution, fill=Region), width = 0.5, outlier.size = 0.5)+
                 ylim(c(0, 1))+
                 xlim(c('Young', 'Senior'))+
                 xlab('')+
                 ylab('Contribution')+
-                scale_fill_manual(values=c('#48de83', '#854bde', '#de854b'))+
+                scale_fill_manual(values=c('#FFBE7A', '#FA7F6F', '#82B0B2'))+
                 theme_bw()+
-                labs(title='Independent Contribution for the Senior group')+
-                theme(text=element_text(size=30),
-                        plot.title=(element_text(hjust=0.5)),
-                        legend.title=element_blank(),
-                        legend.position=(c(0.9, 0.9)),
-                        legend.key.size=unit(1, 'cm'))
-ggsave('independent_box_plot_elder.jpg', height=10, width=15)
+                labs(title = 'Independent Contribution for the Senior group')+
+                theme(text = element_text(size = 10),
+                        plot.title = (element_text(hjust = 0.5)),
+                        axis.text = element_text(size = 10, color = 'black'),
+                        panel.grid.major = element_blank(), 
+                        panel.grid.minor = element_blank(),
+                        panel.background = element_blank(),
+                        legend.title = element_blank(),
+                        legend.position = (c(0.9, 0.88)),
+                        legend.background = element_blank(),
+                        legend.key.size = unit(0.3, 'cm'))
+ggsave('independent_box_plot_elder.jpg', height = 70, width = 100, units = 'mm')
 
 trans.box.Plot <- ggplot(trans.Data)+
-                geom_boxplot(aes(x=Env, y=Contribution, fill=Region), lwd=1)+
+                geom_boxplot(width = 0.5, aes(x=Env, y=Contribution, fill=Region), outlier.size = 0.5)+
                 ylim(c(0, 1))+
                 xlim(c('Young', 'Senior'))+
                 xlab('')+
                 ylab('Contribution')+
-                scale_fill_manual(values=c('#48de83', '#854bde', '#de854b'))+
+                scale_fill_manual(values=c('#FFBE7A', '#FA7F6F', '#82B0B2'))+
                 theme_bw()+
                 labs(title='Transfer Contribution for the Senior group')+
-                theme(text=element_text(size=30),
-                        plot.title=(element_text(hjust=0.5)),
-                        legend.title=element_blank(),
-                        legend.position=(c(0.9, 0.9)),
-                        legend.key.size=unit(1, 'cm'))
-ggsave('transfer_box_plot_elder.jpg', height=10, width=15)
+                theme(text = element_text(size = 10),
+                        plot.title = (element_text(hjust = 0.5)),
+                        axis.text = element_text(size = 10, color = 'black'),
+                        panel.grid.major = element_blank(), 
+                        panel.grid.minor = element_blank(),
+                        panel.background = element_blank(),
+                        legend.title = element_blank(),
+                        legend.position = (c(0.9, 0.88)),
+                        legend.background = element_blank(),
+                        legend.key.size = unit(0.3, 'cm'))
+ggsave('transfer_box_plot_elder.jpg', height = 70, width = 100, units = 'mm')
